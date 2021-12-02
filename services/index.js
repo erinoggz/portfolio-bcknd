@@ -471,11 +471,11 @@ body {font-family: 'Muli', sans-serif;}
   sgMail
     .send(emailData)
     .then((data) => {
-      if (res.statusCode == 200) {
+      if (res.statusCode == 200 || res.statusCode == 202) {
         sgMail
           .send(emailDataFromUser)
           .then((data) => {
-            return data;
+            return;
           })
           .catch((err) => {
             return res.json({
