@@ -18,7 +18,7 @@ if ((process.env.NODE_ENV = 'development')) {
     app.use(cors({ origin: `http://localhost:3000` }))
 }
 if ((process.env.NODE_ENV = 'production')) {
-    app.use(cors({ origin: `https://erin-profile.vercel.app/contact` }))
+    app.use(cors({ origin: `https://erin-profile.vercel.app` }))
 }
 app.use('/api', route)
 
